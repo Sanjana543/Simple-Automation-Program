@@ -1,8 +1,10 @@
 #This is simple program to open notepad file copy the material in it automatically and paste it to ecllipse(I've made this for my comp. to run it in others need to change file name
 #and resize it acc.to your screen)
 #simple program but made my work easy.
+# updated contributed by Nullcoder08
 
 from pywinauto.application import Application as ap
+import numpy
 import pyautogui as pg
 import time
 pg.FAILSAFE = True
@@ -27,7 +29,7 @@ time.sleep(2)
 app=ap().start(r"C:\Users\Anubhav\eclipse\java-2019-06\eclipse\eclipse.exe")
 time.sleep(3)
 app.EclipseIDELauncher.Launch.click()
-time.sleep(15)
+time.sleep(14)
 app.eclipseworkspaceEclipseIDE.menu_select("File->New->Class")
 time.sleep(1)
 pg.click(949,284)
@@ -42,5 +44,5 @@ time.sleep(1)
 pg.hotkey('ctrl','v')
 time.sleep(1)
 pg.click(180,71)
-time.sleep(30)
+time.sleep(20)
 app.kill()
